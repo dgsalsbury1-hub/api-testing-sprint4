@@ -48,7 +48,7 @@ The following structured test design techniques were applied:
 - docs/ - Project documentation and execution workbook
 - 	est-cases/ - Structured test cases in Markdown
 - payloads/ - Sample valid and invalid request bodies
-- ug-reports/ - Defect documentation summary
+- bug-reports/ - Defect documentation summary
 
 ---
 
