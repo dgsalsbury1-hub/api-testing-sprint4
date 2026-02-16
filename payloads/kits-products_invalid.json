@@ -1,0 +1,15 @@
+{
+  "emptyProductsList": {
+    "productsList": []
+  },
+  "zeroQuantity": {
+    "productsList": [
+      { "id": 1, "quantity": 0 }
+    ]
+  },
+  "negativeQuantity": {
+    "productsList": [
+      { "id": 1, "quantity": -1 }
+    ]
+  }
+}
