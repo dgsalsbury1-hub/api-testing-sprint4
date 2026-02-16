@@ -1,51 +1,74 @@
-# API Testing Project � Sprint 4
+# API Testing Project - Sprint 4
 
-## Objective
-Validate data integrity and business rule enforcement for POST /api/v1/kits/:id/products and related delivery endpoints using structured test design techniques.
+## Overview
 
-## Tools & Techniques
-- API Testing (REST & XML)
-- Boundary Value Analysis
-- Equivalence Partitioning
-- Jira Defect Tracking
-- JSON Payload Validation
+This project validates data integrity and business rule enforcement for two API endpoints:
 
-## Repository Contents
-- docs/: Original project documentation (Sprint 4 write-up, workbook).
-- test-cases/: Test cases written in Markdown for key endpoints.
-- payloads/: Sample JSON/XML request payloads (valid/invalid).
-- bug-reports/: Defect notes and Jira references (if applicable).
+- POST /api/v1/kits/:id/products
+- POST /fast-delivery/v3.1.1/calculate-delivery.xml
 
-## How to Review
-1. Start with test-cases/kits-products_test-cases.md for test coverage.
-2. Use payloads/kits-products_valid.json and payloads/kits-products_invalid.json to reproduce requests in Postman.
+Testing focused on input validation, boundary enforcement, and error handling consistency across REST and XML-based services.
 
-## Testing Overview (Sprint 4)
+---
 
-### Scope
-This project validates data integrity and business-rule enforcement for:
-- **POST /api/v1/kits/:id/products**
-- **POST /fast-delivery/v3.1.1/calculate-delivery.xml**
+## Test Execution Summary
 
-Testing coverage includes:
-- Positive and negative scenarios
-- Boundary Value Analysis (BVA) and Equivalence Partitioning (EP)
-- Input validation (type, format, missing fields, ranges)
-- Response validation (status codes + key fields in response body)
-
-### Test Execution Summary (from Project 4 workbook)
-- **Total test cases:** 92
+- **Total Test Cases Executed:** 92
 - **Passed:** 38 (41.30%)
 - **Failed:** 54 (58.70%)
 
-### Defect Reporting (Jira)
-Defects were logged with:
-- Endpoint + HTTP method
-- Request body / parameters used
-- Expected vs actual results
-- Response codes and response body evidence
-- Links to Jira tickets for tracking and RCA
+Failures primarily revealed validation gaps, improper error handling (e.g., 500 vs expected 400), and inconsistent business rule enforcement.
 
-Project reference links:
-- Jira project: S4PT (see docs/Designing & testing API sprint 4.docx for link/details)
-- Test workbook evidence: docs/Project 4_ workbook.pdf
+---
+
+## Testing Methodology
+
+The following structured test design techniques were applied:
+
+- Boundary Value Analysis (BVA)
+- Equivalence Partitioning (EP)
+- Positive and Negative Scenario Testing
+- Data Type and Range Validation
+- HTTP Status Code Verification
+- Request Payload Integrity Validation (JSON and XML)
+
+---
+
+## Tools Used
+
+- REST and XML API Testing
+- ApiDoc (Specification Review)
+- Postman
+- Jira (Defect Tracking)
+
+---
+
+## Repository Structure
+
+- docs/ - Project documentation and execution workbook
+- 	est-cases/ - Structured test cases in Markdown
+- payloads/ - Sample valid and invalid request bodies
+- ug-reports/ - Defect documentation summary
+
+---
+
+## How to Review
+
+1. Begin with 	test-cases/kits-products_test-cases.md for test coverage.
+2. Review docs/Project 4_ workbook.pdf for full execution evidence.
+3. Use payload examples in payloads/ to reproduce test scenarios in Postman.
+
+---
+
+## Defect Tracking
+
+Defects were logged in Jira using structured reporting standards including:
+
+- Endpoint and HTTP method
+- Full request payload
+- Expected vs actual behavior
+- Response code verification
+- Reproduction steps
+- Supporting response evidence
+
+Individual Jira ticket links are embedded within the execution workbook PDF.
