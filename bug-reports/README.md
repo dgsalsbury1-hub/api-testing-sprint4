@@ -1,3 +1,4 @@
+HEAD
 # Bug Reporting Summary (Sprint 4)
 
 ## What’s in this folder
@@ -22,3 +23,34 @@ For each failed test:
 - **92 total test cases executed**
 - **38 passed / 54 failed**
 - Failures were primarily validation/handling issues (e.g., invalid formats or missing parameters returning unexpected server behavior instead of a clean 4xx validation response), documented in Jira for follow-up.
+
+# Bug Reporting Summary (Sprint 4)
+
+## Test Execution Summary
+- Total Test Cases Executed: 92
+- Passed: 38 (41.30%)
+- Failed: 54 (58.70%)
+
+## Scope
+API validation testing covered:
+- POST /api/v1/kits/:id/products
+- POST /fast-delivery/v3.1.1/calculate-delivery.xml
+
+Testing techniques included:
+- Positive and negative testing
+- Boundary Value Analysis
+- Equivalence Partitioning
+- Input validation
+- HTTP status code verification
+
+## Defect Reporting Process
+All failed test cases were documented in Jira with:
+- Endpoint and request method
+- Full request payload
+- Expected vs actual results
+- HTTP status code received
+- Reproduction steps
+- Supporting evidence (response body/logs)
+
+Failures primarily involved validation gaps and improper error handling.
+6eb0362 (Add full execution metrics and Jira bug reporting summary)
